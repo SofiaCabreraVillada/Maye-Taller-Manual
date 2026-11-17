@@ -1,0 +1,64 @@
+/* ==========================================================
+   nosotros.css · Quiénes somos (nosotros.html)
+   ========================================================== */
+
+.section-green {
+  background: var(--verde-suave);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.about > * {
+  min-width: 0;
+}
+
+.about h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, min(4vw, 6vh), 3.75rem);
+}
+
+.about p {
+  margin-bottom: clamp(0.6rem, 2vh, 1.25rem);
+  font-size: clamp(0.9rem, 2.3vh, 1rem);
+  line-height: 1.55;
+}
+
+.about .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.about img {
+  /* pantalla - menú - márgenes y leyenda */
+  height: clamp(16rem, calc(100svh - var(--alto-menu) - 7rem), 44rem);
+  aspect-ratio: auto;
+}
+
+blockquote {
+  margin-block: clamp(0.75rem, 2.5vh, 1.75rem);
+  padding-top: clamp(0.75rem, 2vh, 1.5rem);
+  border-top: 1px solid var(--verde);
+  font-size: clamp(1.05rem, 3vh, 1.6rem);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}

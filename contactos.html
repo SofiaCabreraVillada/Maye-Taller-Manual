@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cuéntanos qué prenda quieres transformar y hagamos juntos una pieza única.">
+  <title>Contáctanos · Maye Taller Manual</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="CSS/Base.css">
+  <link rel="stylesheet" href="CSS/Contactos.css">
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container navigation">
+      <a href="index.html" class="brand">
+        <img src="IMG/Mayelogo.png" alt="Maye Taller Manual" class="brand-logo">
+      </a>
+ 
+
+      <nav aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Nuestros proyectos</a>
+        <a href="nosotros.html">Quiénes somos</a>
+        <a href="tutoriales.html">Tutoriales</a>
+        <a href="contactos.html" aria-current="page">Contáctanos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="contacto" class="section section-contact">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">05 / Contáctanos</p>
+          <h1>Todo empieza<br>con una idea.</h1>
+
+          <p>
+            Cuéntanos qué prenda quieres transformar, qué te inspira o
+            qué técnica te da curiosidad. Nos encantará leerte.
+          </p>
+
+          <address>
+            <p>
+              <strong>Correo de contacto</strong><br>
+              <a href="mailto:hola@trazovivo.example">
+                hola@Mayemanual.example
+              </a>
+            </p>
+            <p>Instagram: @maye_taller_manual</p>
+          </address>
+
+          <p class="small">
+            Datos de ejemplo: reemplaza el correo, el usuario y la
+            información de la creadora por los de tu emprendimiento.
+          </p>
+        </div>
+
+        <!-- Sustituye action por la URL real de tu servicio de envío.
+             Después, retira disabled del botón. -->
+        <form class="contact-form" action="#" method="post">
+          <h2>Te escuchamos.</h2>
+
+          <label for="nombre">Nombre</label>
+          <input
+            id="nombre" name="nombre" type="text"
+            autocomplete="name" placeholder="¿Cómo te llamas?"
+            maxlength="100" required
+          >
+
+          <label for="correo">Correo electrónico</label>
+          <input
+            id="correo" name="correo" type="email"
+            autocomplete="email" placeholder="tu@correo.com"
+            required
+          >
+
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje" name="mensaje" rows="6"
+            placeholder="Cuéntanos tu idea o déjanos tu pregunta…"
+            maxlength="5000" required
+          ></textarea>
+
+          <p id="form-help" class="small">
+            Formulario de demostración: el envío aún no está configurado.
+          </p>
+
+          <button
+            class="button" type="submit"
+            aria-describedby="form-help" disabled
+          >
+            Enviar mi pregunta ↗
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">Transformamos tus prendas en piezas unicas</p>
+      <p class="footer-brand">Maye Taller Manual</p>
+
+      <div class="footer-bottom">
+        <p>© 2026 Maye · Taller Manual.</p>
+        <a href="#top">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

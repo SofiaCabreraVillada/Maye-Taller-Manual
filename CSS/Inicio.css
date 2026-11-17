@@ -1,0 +1,143 @@
+/* ==========================================================
+   inicio.css · Página de inicio (index.html)
+   ========================================================== */
+
+/* La portada ocupa la pantalla visible menos el menú, centrada en vertical */
+#inicio.section {
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - var(--alto-menu) - 1px);
+  padding-block: clamp(1rem, 3vh, 2.5rem);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5.5rem);
+}
+
+.hero > * {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, min(6.3vw, 8.5vh), 5.75rem);
+  font-weight: 900;
+}
+
+.hero h1 em {
+  color: var(--rosa);
+  font-weight: 400;
+}
+
+.intro {
+  max-width: 33rem;
+}
+
+.hero .small {
+  margin-top: 1.5rem;
+}
+
+/* Carrusel (js/carrusel.js mueve las imágenes sin recargar la página) */
+
+.carousel {
+  min-width: 0;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rosa) var(--rosa-suave);
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.slide img {
+  /* pantalla - menú - márgenes - leyenda y botones del carrusel */
+  height: clamp(16rem, calc(100svh - var(--alto-menu) - 9rem), 40rem);
+  aspect-ratio: auto;
+}
+
+.carousel-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.carousel-links a {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.carousel-links a:hover,
+.carousel-links a[aria-current="true"] {
+  background: var(--verde);
+}
+
+.manifesto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--ocre);
+  font-size: clamp(1rem, 2vw, 1.6rem);
+  font-style: italic;
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  /* En móvil el texto y el carrusel se apilan y se desplaza hacia abajo */
+  #inicio.section {
+    min-height: 0;
+    padding-block: 2rem 3rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .slide img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero .button {
+    width: 100%;
+  }
+
+  .manifesto {
+    gap: 0.5rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slides {
+    scroll-behavior: auto;
+  }
+}
